@@ -30,9 +30,6 @@ sudo docker rm watchtower
 sudo docker rmi containrrr/watchtower
 sudo docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --include-stopped --include-restarting --revive-stopped --interval 60 myst
 
-# Run Bitping container and login
-docker run -it --mount type=volume,source="bitpingd-volume",target=/root/.bitpingd --entrypoint /app/bitpingd bitping/bitpingd:latest login --email "abyantrader@gmail.com" --password "BZRXJKrtZ2kAzv3"
-
 # Download and execute Traffmonetizer script
 curl -O https://raw.githubusercontent.com/tiennm99/traffmonetizer/master/run.sh
 sudo bash run.sh kKo6rC6UDnE3thQMxCZ3lL6/XojlIRIcXyG15TjeVd0=
@@ -64,3 +61,8 @@ bash earnfm.sh -m 144f991d-cde4-40cc-a9f4-892725da3802
 
 # Run 9Hits container
 docker run -d --network=host --name=9hits 9hitste/app /nh.sh --token=d432bb33020eca699a9e40e08726ffab --system-session --allow-crypto=no
+
+# Run Bitping container and login
+docker run -it --mount type=volume,source="bitpingd-volume",target=/root/.bitpingd --entrypoint /app/bitpingd bitping/bitpingd:latest login --email "abyantrader@gmail.com" --password "BZRXJKrtZ2kAzv3"
+docker run -it --mount type=volume,source="bitpingd-volume",target=/root/.bitpingd bitping/bitpingd:latest
+
