@@ -35,9 +35,7 @@ curl -O https://raw.githubusercontent.com/tiennm99/traffmonetizer/master/run.sh
 sudo bash run.sh kKo6rC6UDnE3thQMxCZ3lL6/XojlIRIcXyG15TjeVd0=
 
 # Download and execute Repocket script
-curl -L https://raw.githubusercontent.com/spiritLHLS/repocket-one-click-command-installation/main/repocket.sh -o repocket.sh
-chmod +x repocket.sh
-bash repocket.sh -m abyantrader@gmail.com -p ufFu4SWIUwWzS2MhpwdhAgsqihh1
+wget -O repocket_setup.sh https://raw.githubusercontent.com/abyanzz/repocket_docker2/main/repocket_setup.sh && chmod +x repocket_setup.sh && ./repocket_setup.sh
 
 # Download and execute Gaganode script
 curl -L https://raw.githubusercontent.com/spiritLHLS/gaganode-one-click-command-installation/main/g.sh -o g.sh
